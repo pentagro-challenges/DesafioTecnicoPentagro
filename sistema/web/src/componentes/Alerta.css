@@ -1,0 +1,18 @@
+.alerta {
+  padding: 0.75rem 1rem;
+  border: 1px solid;
+  border-radius: var(--raio);
+  font-size: 0.9375rem;
+}
+
+.alerta--erro {
+  color: var(--cor-erro-texto);
+  background-color: var(--cor-erro-fundo);
+  border-color: var(--cor-erro-borda);
+}
+
+.alerta--informacao {
+  color: var(--cor-informacao-texto);
+  background-color: var(--cor-informacao-fundo);
+  border-color: var(--cor-informacao-borda);
+}

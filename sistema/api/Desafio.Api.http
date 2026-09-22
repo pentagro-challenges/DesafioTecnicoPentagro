@@ -1,0 +1,27 @@
+@api = http://localhost:5199
+
+### Cadastro de usuário (público)
+POST {{api}}/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Maria Silva",
+  "login": "maria.silva",
+  "email": "maria.silva@pentagro.com.br",
+  "senha": "Pentagro2026",
+  "confirmacaoSenha": "Pentagro2026"
+}
+
+### Login (público)
+# @name login
+POST {{api}}/api/auth/login
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "senha": "Admin@123"
+}
+
+### Listagem de usuários (exige token)
+GET {{api}}/api/usuarios
+Authorization: Bearer {{login.response.body.token}}

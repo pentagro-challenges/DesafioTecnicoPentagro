@@ -1,0 +1,32 @@
+/* Paleta, espaçamentos e tipografia usados por todas as telas (RNF-06).
+   Cores da marca conforme o Design System Pentagro (primary #00909f). */
+:root {
+  color-scheme: light;
+
+  --cor-fundo: #f2f4f6;
+  --cor-superficie: #ffffff;
+  --cor-superficie-suave: #f7f8fa;
+  --cor-borda: #dde2e8;
+  --cor-borda-forte: #b6bfca;
+
+  --cor-texto: #1b2430;
+  --cor-texto-suave: #55606f;
+
+  --cor-primaria: #00909f;
+  --cor-primaria-escura: #006671;
+
+  --cor-erro-texto: #8f2c21;
+  --cor-erro-fundo: #fdf2f0;
+  --cor-erro-borda: #e6b3ab;
+
+  --cor-informacao-texto: #006671;
+  --cor-informacao-fundo: #e6f4f5;
+  --cor-informacao-borda: #bfe2e5;
+
+  --raio: 8px;
+  --raio-grande: 12px;
+  --altura-de-toque: 44px;
+  --sombra: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 16px rgba(16, 24, 40, 0.06);
+
+  --fonte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

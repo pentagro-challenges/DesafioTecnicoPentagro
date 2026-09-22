@@ -1,0 +1,45 @@
+/* Reset mínimo e estilos de base compartilhados por todas as telas. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--cor-primaria);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}

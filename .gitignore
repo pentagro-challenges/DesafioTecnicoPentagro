@@ -1,0 +1,26 @@
+# Os subprojetos têm o próprio .gitignore; estas regras são a rede de segurança
+# da raiz, para o caso de algo ser gerado fora do diretório esperado.
+
+# Build
+bin/
+obj/
+node_modules/
+dist/
+
+# Banco SQLite local — recriado na primeira execução da API
+*.db
+*.db-shm
+*.db-wal
+
+# Variáveis de ambiente locais (o .env.example é versionado)
+.env
+.env.local
+
+# Editores e sistema operacional
+.vs/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,7 @@
+bin/
+obj/
+
+# Banco local, recriado a cada execução em uma pasta limpa.
+desafio.db
+desafio.db-shm
+desafio.db-wal

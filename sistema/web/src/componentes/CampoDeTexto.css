@@ -1,0 +1,39 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.campo__rotulo {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.campo__entrada {
+  width: 100%;
+  min-height: var(--altura-de-toque);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--cor-borda-forte);
+  border-radius: var(--raio);
+  background-color: var(--cor-superficie);
+}
+
+.campo__entrada:disabled {
+  background-color: var(--cor-superficie-suave);
+  color: var(--cor-texto-suave);
+}
+
+.campo__entrada--invalida {
+  border-color: var(--cor-erro-borda);
+}
+
+.campo__apoio {
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+.campo__erro {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-erro-texto);
+}

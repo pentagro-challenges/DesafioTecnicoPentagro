@@ -1,0 +1,5 @@
+# Normaliza fim de linha no repositório (LF) e entrega nativo no checkout.
+# Sem isto, diffs de uma linha podem aparecer como o arquivo inteiro alterado.
+* text=auto
+
+*.png binary
