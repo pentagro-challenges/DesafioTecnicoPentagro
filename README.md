@@ -40,7 +40,7 @@ ou superior. A [seção 3.1](#31-o-que-precisa-estar-instalado) traz os links e 
 2. [Comece por aqui: crie a sua cópia](#2-comece-por-aqui-crie-a-sua-cópia)
 3. [Colocando o sistema no ar](#3-colocando-o-sistema-no-ar)
 4. [O que se pede na etapa assíncrona](#4-o-que-se-pede-na-etapa-assíncrona)
-5. [Uso de inteligência artificial](#5-uso-de-inteligência-artificial)
+5. [Uso de inteligência artificial](#7-uso-de-inteligência-artificial)
 6. [Documento de Comentários](#6-documento-de-comentários-sobre-o-que-foi-entregue)
 7. [Como entregar](#7-como-entregar)
 8. [A etapa síncrona](#8-a-etapa-síncrona)
@@ -62,7 +62,6 @@ com o que foi combinado que ele deveria fazer, evoluí-lo e explicar as decisõe
 |---|---|---|
 | **O sistema** | [`sistema/`](sistema/) | A aplicação que já sobe e funciona: API em [`sistema/api`](sistema/api) (.NET 10, Minimal API, EF Core + SQLite) e aplicação web em [`sistema/web`](sistema/web) (React 19 + TypeScript + Vite). |
 | **A especificação** | [`especificacao/ESPECIFICACAO.md`](especificacao/ESPECIFICACAO.md) | O documento funcional e técnico do módulo: regras de negócio numeradas (`RN-xx`), requisitos não funcionais (`RNF-xx`), contratos de API, telas e critérios de aceite (`CA-xx.y`). |
-| **O guia de execução** | [`sistema/README.md`](sistema/README.md) | Como subir a API e a web, configuração, banco de dados, todos os comandos e solução de problemas. É o manual: recorra a ele sempre que precisar de profundidade. |
 
 ### A especificação é o contrato
 
@@ -102,8 +101,7 @@ Pela interface do GitHub, sem comando nenhum:
 
 O GitHub leva você para o seu repositório novo. Confira a barra de endereço: ela agora mostra
 `github.com/<seu-usuario>/<nome-que-voce-escolheu>`, e o nome aparece com a etiqueta **Private**.
-Quem avalia o desafio só consegue abri-lo depois que você libera o acesso, na
-[seção 9](#9-como-entregar).
+Quem avalia o desafio só consegue abri-lo depois que você libera o acesso.
 
 
 ### Passo 2 — Clonar a sua cópia para a sua máquina
@@ -143,10 +141,6 @@ Troque `seu-nome` pelo seu nome, sem acentos e sem espaços — por exemplo, `de
 Meta desta seção: **sistema rodando e primeiro login feito**. Com tudo instalado, são cerca de cinco
 minutos; na primeira vez, contando os downloads do .NET e do npm, reserve de quinze a trinta.
 
-Aqui está o caminho mais curto. Configuração, variáveis de ambiente, banco de dados, lista completa de
-comandos e solução de problemas estão no [`sistema/README.md`](sistema/README.md), que é o guia
-completo.
-
 ### 3.1 O que precisa estar instalado
 
 | Ferramenta | Versão | Para que serve | Como conferir |
@@ -160,7 +154,25 @@ Fora Git, .NET e Node, nada mais: nenhum banco a instalar, nenhum contêiner a s
 externo a configurar. O banco é um arquivo SQLite criado sozinho na primeira execução. Qualquer editor
 serve.
 
-### 3.2 O primeiro login
+ ### 3.2 Subindo a API e a web
+
+São dois processos, cada um no seu terminal, partindo da pasta `sistema/`. Suba a API primeiro, porque
+a web depende dela.
+
+```bash
+# Terminal 1 — API. Na primeira vez o .NET baixa pacotes, compila e cria o banco.
+cd api
+dotnet run
+
+# Terminal 2 — web. O npm install só é necessário na primeira vez.
+cd web
+npm install
+npm run dev
+```
+
+A API responde em `http://localhost:5199` e a web abre em `http://localhost:5173`.
+
+### 3.3 O primeiro login
 
 Abra <http://localhost:5173>. A tela de login aparece. Entre com o usuário que a API cria sozinha na
 inicialização, quando o banco ainda está vazio:
